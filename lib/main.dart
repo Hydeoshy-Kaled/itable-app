@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:itable_app/pages/auth_page.dart';
-import 'package:itable_app/restaurant_page/restaurants_overview.dart';
+import 'package:itable_app/pages/restaurants_overview.dart';
 import 'package:itable_app/pages/welcome_screen.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:itable_app/utils/app_routes.dart';
@@ -48,7 +48,6 @@ class ItableApp extends ConsumerWidget {
             fontWeight: FontWeight.bold,
             color: Colors.white,
           ),
-          
         ),
       ),
       routes: {

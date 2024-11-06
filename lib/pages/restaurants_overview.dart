@@ -3,8 +3,8 @@ import 'package:itable_app/widgets/category_card.dart';
 import 'package:itable_app/widgets/section_title.dart';
 import 'package:itable_app/widgets/menu_card.dart';
 
-class RestaurantesOverview extends StatelessWidget {
-  const RestaurantesOverview({super.key});
+class RestaurantsOverview extends StatelessWidget {
+  const RestaurantsOverview({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -42,34 +42,35 @@ class RestaurantesOverview extends StatelessWidget {
                 scrollDirection: Axis.horizontal,
                 children: const [
                   CategoryCard(icon: Icons.local_pizza, color: Colors.pink),
-                  CategoryCard(icon: Icons.icecream, color: Colors.yellow),
-                  CategoryCard(icon: Icons.fastfood, color: Colors.lightGreen),
+                  CategoryCard(icon: Icons.icecream, color: Colors.blue),
+                  CategoryCard(icon: Icons.fastfood, color: Colors.green),
                 ],
               ),
             ),
             const SectionTitle(title: "Today's special menu"),
-            const Row(
-              children: [
-                Expanded(
-                  child: MenuCard(
+            const SingleChildScrollView(
+              scrollDirection: Axis.horizontal,
+              child: Row(
+                children: [
+                  SizedBox(width: 16),
+                  MenuCard(
                     title: 'The Taco Company',
                     rating: 4.8,
                     cuisine: 'Mexican',
                     icon: Icons.fastfood,
                     color: Colors.orange,
                   ),
-                ),
-                SizedBox(width: 8),
-                Expanded(
-                  child: MenuCard(
+                  SizedBox(width: 8),
+                  MenuCard(
                     title: 'The Burguer Club',
                     rating: 5.0,
                     cuisine: 'American',
                     icon: Icons.local_drink,
                     color: Colors.purple,
                   ),
-                ),
-              ],
+                  SizedBox(width: 16),
+                ],
+              ),
             ),
             const SectionTitle(title: 'Featured restaurants'),
             Container(
