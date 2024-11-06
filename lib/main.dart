@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:itable_app/pages/auth_page.dart';
-import 'package:itable_app/pages/restaurants_overview.dart';
+import 'package:itable_app/restaurant_page/restaurants_overview.dart';
 import 'package:itable_app/pages/welcome_screen.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:itable_app/utils/app_routes.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:itable_app/models/auth.dart';
+import 'package:itable_app/auth/auth.dart';
 
 void main() {
   runApp(ProviderScope(child: ItableApp()));

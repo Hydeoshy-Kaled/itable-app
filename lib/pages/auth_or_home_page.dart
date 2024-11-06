@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:itable_app/models/auth.dart';
+import 'package:itable_app/auth/auth.dart';
 import 'package:itable_app/pages/auth_page.dart';
-import 'package:itable_app/pages/restaurants_overview.dart';
+import 'package:itable_app/restaurant_page/restaurants_overview.dart';
 
 class AuthOrHomePage extends ConsumerWidget {
   const AuthOrHomePage({super.key});

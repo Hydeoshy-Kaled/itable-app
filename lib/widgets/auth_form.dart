@@ -4,7 +4,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:itable_app/providers/auth_state_provider.dart';
 import 'package:itable_app/utils/app_routes.dart';
 import 'button_auth.dart';
-import 'package:itable_app/models/auth.dart';
+import 'package:itable_app/auth/auth.dart';
 
 class AuthForm extends ConsumerStatefulWidget {
   const AuthForm({super.key});

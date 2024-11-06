@@ -40,7 +40,7 @@ class WelcomeScreen extends StatelessWidget {
               ),
               SizedBox(
                 width: 400,
-                height: 468,
+                height: 400,
                 child: Image.asset('assets/images/home_page.png'),
               ),
               const SizedBox(
