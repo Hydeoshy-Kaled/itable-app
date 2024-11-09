@@ -7,12 +7,11 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 class AuthPage extends ConsumerWidget {
   const AuthPage({super.key});
 
-
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-  final authMode = ref.watch(authStateProvider);
+    final authMode = ref.watch(authStateProvider);
     return Scaffold(
-      //resizeToAvoidBottomInset: true,
+        //resizeToAvoidBottomInset: true,
         body: SizedBox(
       child: SingleChildScrollView(
         child: Column(
@@ -26,11 +25,10 @@ class AuthPage extends ConsumerWidget {
             SizedBox(
               //padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 20),
               child: Center(
-                child: 
-                Text(
-                  authMode == AuthMode.Login ?
-                  'Faça seu login para continuar!' :
-                  'Realize seu cadastro para continuar!',
+                child: Text(
+                  authMode == AuthMode.Login
+                      ? 'Faça seu login para continuar!'
+                      : 'Realize seu cadastro para continuar!',
                   style: TextStyle(
                     fontFamily: GoogleFonts.raleway().fontFamily,
                     fontSize: 24,
@@ -48,6 +46,5 @@ class AuthPage extends ConsumerWidget {
         ),
       ),
     ));
-    //sizedbox(height: 16),
   }
 }

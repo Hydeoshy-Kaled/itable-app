@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:itable_app/pages/auth_page.dart';
-import 'package:itable_app/pages/restaurants_overview.dart';
+import 'package:itable_app/pages/restaurants_page/restaurants_overview.dart';
 import 'package:itable_app/pages/welcome_screen.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:itable_app/pages/restaurants_fast_food_page/restaurants_fast_food.view.dart';
+import 'package:itable_app/pages/restaurants_japanese_page/restaurants_japanese_view.dart';
+import 'package:itable_app/pages/restaurants_mexican_page/restaurants_mexican_view.dart';
 import 'package:itable_app/utils/app_routes.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:itable_app/auth/auth.dart';
@@ -54,6 +57,11 @@ class ItableApp extends ConsumerWidget {
         AppRoutes.HOME_PAGE: (ctx) => const WelcomeScreen(),
         AppRoutes.LOGIN: (ctx) => const AuthPage(),
         AppRoutes.RESTAURANTS_OVERVIEW: (ctx) => const RestaurantsOverview(),
+        AppRoutes.RESTAURANTS_MEXICAN: (ctx) => const RestaurantsMexicanView(),
+        AppRoutes.RESTAURANTS_FAST_FOOD: (ctx) =>
+            const RestaurantsFastFoodView(),
+        AppRoutes.RESTAURANTS_JAPANESE: (ctx) =>
+            const RestaurantesJapaneseView(),
       },
     );
   }
