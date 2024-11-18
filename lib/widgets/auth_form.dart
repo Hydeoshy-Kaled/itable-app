@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:itable_app/exceptions/auth_exception.dart';
 
 import 'package:itable_app/providers/auth_state_provider.dart';
 import 'package:itable_app/utils/app_routes.dart';
@@ -90,9 +91,22 @@ class AuthFormState extends ConsumerState<AuthForm>
         Navigator.of(context)
             .pushReplacementNamed(AppRoutes.RESTAURANTS_OVERVIEW);
       }
+    } on AuthException catch (authError) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(
+          content: Text(
+            authError.toString(),
+          ),
+        ),
+      );
     } catch (error) {
-      // Tratar o erro de autenticação, talvez mostrar uma mensagem na tela
-      print("Erro de autenticação: $error");
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(
+          content: Text(
+            'Error inesperado: $error',
+          ),
+        ),
+      );
     }
     setState(() {
       _isLoading = false;

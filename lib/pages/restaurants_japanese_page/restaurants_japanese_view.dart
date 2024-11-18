@@ -10,28 +10,16 @@ class RestaurantsJapaneseView extends StatelessWidget {
   Widget build(BuildContext context) {
     final List<Map<String, dynamic>> categories = [
       {
-        'name': 'Pizza',
-        'price': '\$6',
-        'icon': 'assets/images/icon_pizza.png',
+        'name': 'Japanese Special',
+        'price': '\$30',
+        'icon': 'assets/images/food_japanese.png',
         'color': Colors.red
       },
       {
-        'name': 'Burguer',
+        'name': 'Sushi',
         'price': '\$12',
-        'icon': 'assets/images/burguer.png',
+        'icon': 'assets/images/sushi.png',
         'color': Colors.orange
-      },
-      {
-        'name': 'Chicken Burger',
-        'price': '\$9',
-        'icon': 'assets/images/burguer.png',
-        'color': Colors.green
-      },
-      {
-        'name': 'Chicken Wings',
-        'price': '\$10',
-        'icon': 'assets/images/chicken.png',
-        'color': Colors.blue
       },
     ];
 
@@ -74,23 +62,23 @@ class RestaurantsJapaneseView extends StatelessWidget {
                   ),
                 ),
               ),
-              const SizedBox(height: 30),
+              const SizedBox(height: 15),
               Align(
                 alignment: Alignment.center,
                 child: Container(
-                  height: 150,
-                  width: 311,
+                  height: 210,
+                  width: 343,
                   margin: const EdgeInsets.only(right: 16),
                   decoration: const BoxDecoration(
                     shape: BoxShape.circle,
                     image: DecorationImage(
-                      image: AssetImage('assets/images/puppet_image.png'),
+                      image: AssetImage('assets/images/person_japanese.png'),
                       fit: BoxFit.cover,
                     ),
                   ),
                 ),
               ),
-              const SizedBox(height: 16),
+              const SizedBox(height: 10),
               Expanded(
                 child: Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 16.0),

@@ -74,12 +74,12 @@ class RestaurantsFastFoodView extends StatelessWidget {
                   ),
                 ),
               ),
-              const SizedBox(height: 30),
+              const SizedBox(height: 15),
               Align(
                 alignment: Alignment.center,
                 child: Container(
-                  height: 150,
-                  width: 311,
+                  height: 200,
+                  width: 300,
                   margin: const EdgeInsets.only(right: 16),
                   decoration: const BoxDecoration(
                     shape: BoxShape.circle,
@@ -90,7 +90,7 @@ class RestaurantsFastFoodView extends StatelessWidget {
                   ),
                 ),
               ),
-              const SizedBox(height: 30),
+              const SizedBox(height: 10),
               Expanded(
                 child: Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 16.0),

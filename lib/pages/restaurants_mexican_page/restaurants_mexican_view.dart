@@ -10,25 +10,25 @@ class RestaurantsMexicanView extends StatelessWidget {
   Widget build(BuildContext context) {
     final List<Map<String, dynamic>> categories = [
       {
-        'name': 'PizzaHut',
+        'name': 'Taco Loco',
         'price': '\$6',
-        'icon': 'assets/images/icon_pizza.png',
+        'icon': 'assets/images/tacos.png',
         'color': Colors.red
       },
       {
-        'name': 'Burguer King',
+        'name': 'El Sombrero',
         'price': '\$12',
-        'icon': 'assets/images/burguer.png',
+        'icon': 'assets/images/chicken_mexican.png',
         'color': Colors.orange
       },
       {
-        'name': 'Popeye\'s',
+        'name': 'Los nachos',
         'price': '\$9',
-        'icon': 'assets/images/burguer.png',
+        'icon': 'assets/images/nachos.png',
         'color': Colors.green
       },
       {
-        'name': 'KFC',
+        'name': 'Viva Mexico',
         'price': '\$10',
         'icon': 'assets/images/chicken.png',
         'color': Colors.blue
@@ -74,23 +74,23 @@ class RestaurantsMexicanView extends StatelessWidget {
                   ),
                 ),
               ),
-              const SizedBox(height: 30),
+              const SizedBox(height: 15),
               Align(
                 alignment: Alignment.center,
                 child: Container(
-                  height: 150,
-                  width: 311,
-                  margin: const EdgeInsets.only(right: 16),
+                  height: 210,
+                  width: 343,
+                  margin: const EdgeInsets.only(right: 10),
                   decoration: const BoxDecoration(
                     shape: BoxShape.circle,
                     image: DecorationImage(
-                      image: AssetImage('assets/images/puppet_image.png'),
+                      image: AssetImage('assets/images/person_mexican.png'),
                       fit: BoxFit.cover,
                     ),
                   ),
                 ),
               ),
-              const SizedBox(height: 16),
+              const SizedBox(height: 10),
               Expanded(
                 child: Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 16.0),

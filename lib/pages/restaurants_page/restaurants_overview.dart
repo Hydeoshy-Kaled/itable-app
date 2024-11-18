@@ -157,6 +157,19 @@ class RestaurantsOverviewContent extends StatelessWidget {
                     );
                   },
                 ),
+                const SizedBox(width: 8),
+                MenuCard(
+                  title: 'Sakura Sabor',
+                  rating: 5.0,
+                  cuisine: 'Japanese',
+                  imagePath: 'assets/images/icon_japanese.png',
+                  color: const Color(0xFFFFEBEE),
+                  onTap: () {
+                    Navigator.of(context).pushNamed(
+                      AppRoutes.RESTAURANTS_JAPANESE,
+                    );
+                  },
+                ),
                 const SizedBox(width: 16),
               ],
             ),
