@@ -133,7 +133,7 @@ class RestaurantsOverviewContent extends StatelessWidget {
               children: [
                 const SizedBox(width: 16),
                 MenuCard(
-                  title: 'The Taco Company',
+                  title: 'Taco Loco',
                   rating: 4.8,
                   cuisine: 'Mexican',
                   imagePath: 'assets/images/tacos.png',
@@ -146,7 +146,7 @@ class RestaurantsOverviewContent extends StatelessWidget {
                 ),
                 const SizedBox(width: 8),
                 MenuCard(
-                  title: 'The Burguer Club',
+                  title: 'Burguer',
                   rating: 5.0,
                   cuisine: 'American',
                   imagePath: 'assets/images/burguer.png',
@@ -159,10 +159,10 @@ class RestaurantsOverviewContent extends StatelessWidget {
                 ),
                 const SizedBox(width: 8),
                 MenuCard(
-                  title: 'Sakura Sabor',
+                  title: 'Lamen',
                   rating: 5.0,
                   cuisine: 'Japanese',
-                  imagePath: 'assets/images/icon_japanese.png',
+                  imagePath: 'assets/images/lamen.png',
                   color: const Color(0xFFFFEBEE),
                   onTap: () {
                     Navigator.of(context).pushNamed(
@@ -188,15 +188,94 @@ class RestaurantsOverviewContent extends StatelessWidget {
                 color: Colors.orange[200],
                 borderRadius: BorderRadius.circular(16),
               ),
-              child: const Center(
-                child: Image(
-                  image: AssetImage('assets/images/chicken.png'),
-                  width: 327,
-                  height: 147,
-                ),
+              child: const Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text(
+                    'The Burguer Club',
+                    style: TextStyle(
+                      fontSize: 24,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  SizedBox(height: 16),
+                  Image(
+                    image: AssetImage('assets/images/chicken.png'),
+                    width: 327,
+                    height: 147,
+                  ),
+                ],
               ),
             ),
-          )
+          ),
+          const SizedBox(height: 20),
+          GestureDetector(
+            onTap: () {
+              Navigator.of(context).pushNamed(
+                AppRoutes.RESTAURANTS_JAPANESE,
+              );
+            },
+            child: Container(
+              height: 200,
+              width: 343,
+              decoration: BoxDecoration(
+                color: Colors.orange[200],
+                borderRadius: BorderRadius.circular(16),
+              ),
+              child: const Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text(
+                    'Sakura Sabor',
+                    style: TextStyle(
+                      fontSize: 24,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  SizedBox(height: 16),
+                  Image(
+                    image: AssetImage('assets/images/lamen.png'),
+                    width: 327,
+                    height: 147,
+                  ),
+                ],
+              ),
+            ),
+          ),
+          const SizedBox(height: 20),
+          GestureDetector(
+            onTap: () {
+              Navigator.of(context).pushNamed(
+                AppRoutes.RESTAURANTS_MEXICAN,
+              );
+            },
+            child: Container(
+              height: 200,
+              width: 343,
+              decoration: BoxDecoration(
+                color: Colors.orange[200],
+                borderRadius: BorderRadius.circular(16),
+              ),
+              child: const Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text(
+                    'The Taco Company',
+                    style: TextStyle(
+                      fontSize: 24,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  SizedBox(height: 16),
+                  Image(
+                    image: AssetImage('assets/images/tacos.png'),
+                    width: 327,
+                    height: 147,
+                  ),
+                ],
+              ),
+            ),
+          ),
         ],
       ),
     );
