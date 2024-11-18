@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:itable_app/pages/restaurants_page/bookings/bookings_screen_navigation_view.dart';
 import 'package:itable_app/pages/restaurants_page/profile_screen_navigation.dart';
 import 'package:itable_app/utils/app_routes.dart';
 import 'package:itable_app/widgets/category_card.dart';
@@ -45,6 +44,7 @@ class _RestaurantsOverviewState extends State<RestaurantsOverview> {
     });
   }
 
+  @override
   void initState() {
     super.initState();
     filteredItems = List.from(allItems);

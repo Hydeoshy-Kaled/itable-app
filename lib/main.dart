@@ -61,7 +61,7 @@ class ItableApp extends ConsumerWidget {
         AppRoutes.RESTAURANTS_FAST_FOOD: (ctx) =>
             const RestaurantsFastFoodView(),
         AppRoutes.RESTAURANTS_JAPANESE: (ctx) =>
-            const RestaurantesJapaneseView(),
+            const RestaurantsJapaneseView(),
       },
     );
   }
