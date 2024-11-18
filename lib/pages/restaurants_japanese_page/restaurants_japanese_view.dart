@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:itable_app/utils/app_routes.dart';
+import 'package:itable_app/widgets/button_restaurants.dart';
 import 'package:itable_app/widgets/categoryFood_card.dart';
 
 class RestaurantsJapaneseView extends StatelessWidget {
@@ -8,25 +10,25 @@ class RestaurantsJapaneseView extends StatelessWidget {
   Widget build(BuildContext context) {
     final List<Map<String, dynamic>> categories = [
       {
-        'name': 'PizzaHut',
+        'name': 'Pizza',
         'price': '\$6',
         'icon': 'assets/images/icon_pizza.png',
         'color': Colors.red
       },
       {
-        'name': 'Burguer King',
+        'name': 'Burguer',
         'price': '\$12',
         'icon': 'assets/images/burguer.png',
         'color': Colors.orange
       },
       {
-        'name': 'Popeye\'s',
+        'name': 'Chicken Burger',
         'price': '\$9',
         'icon': 'assets/images/burguer.png',
         'color': Colors.green
       },
       {
-        'name': 'KFC',
+        'name': 'Chicken Wings',
         'price': '\$10',
         'icon': 'assets/images/chicken.png',
         'color': Colors.blue
@@ -64,7 +66,7 @@ class RestaurantsJapaneseView extends StatelessWidget {
               const Padding(
                 padding: EdgeInsets.symmetric(horizontal: 16),
                 child: Text(
-                  'Restaurants > Takeaway\nFast Food',
+                  'Restaurants > Takeaway\nJapanese',
                   style: TextStyle(
                     color: Colors.white,
                     fontSize: 24,
@@ -112,6 +114,17 @@ class RestaurantsJapaneseView extends StatelessWidget {
                       );
                     },
                   ),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.all(16.0),
+                child: ButtonRestaurants(
+                  text: 'Reserve agora',
+                  onPressed: () {
+                    Navigator.of(context).pushNamed(
+                      AppRoutes.BOOKING_FORM,
+                    );
+                  },
                 ),
               )
             ],

@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:itable_app/utils/app_routes.dart';
+import 'package:itable_app/widgets/button_restaurants.dart';
 import 'package:itable_app/widgets/categoryFood_card.dart';
 
 class RestaurantsMexicanView extends StatelessWidget {
@@ -64,7 +66,7 @@ class RestaurantsMexicanView extends StatelessWidget {
               const Padding(
                 padding: EdgeInsets.symmetric(horizontal: 16),
                 child: Text(
-                  'Restaurants > Takeaway\nFast Food',
+                  'Restaurants > Takeaway\nMexican',
                   style: TextStyle(
                     color: Colors.white,
                     fontSize: 24,
@@ -113,7 +115,18 @@ class RestaurantsMexicanView extends StatelessWidget {
                     },
                   ),
                 ),
-              )
+              ),
+              Padding(
+                padding: const EdgeInsets.all(16.0),
+                child: ButtonRestaurants(
+                  text: 'Reserve agora',
+                  onPressed: () {
+                    Navigator.of(context).pushNamed(
+                      AppRoutes.BOOKING_FORM,
+                    );
+                  },
+                ),
+              ),
             ],
           )
         ],
