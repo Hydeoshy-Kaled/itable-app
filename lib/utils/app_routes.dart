@@ -7,4 +7,8 @@ class AppRoutes {
   static const RESTAURANTS_FAST_FOOD = '/restaurants-fast-food';
   static const RESTAURANTS_JAPANESE = '/restaurants-japanese';
   static const BOOKING_FORM = '/form-table';
+  static const CATEGORIES_MEXICAN = '/categories-mexican';
+  static const CATEGORIES_FAST_FOOD = '/categories-fast-food';
+  static const CATEGORIES_JAPANESE = '/categories-japanese';
+  static const SUCESS_FORM = '/sucess-form';
 }

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:itable_app/pages/restaurants_page/profile_screen_navigation.dart';
 import 'package:itable_app/utils/app_routes.dart';
+import 'package:itable_app/widgets/CustomDrawer.dart';
 import 'package:itable_app/widgets/category_card.dart';
 import 'package:itable_app/widgets/custom_bottom_navigation_bar.dart';
 import 'package:itable_app/widgets/section_title.dart';
@@ -56,10 +57,17 @@ class _RestaurantsOverviewState extends State<RestaurantsOverview> {
       appBar: AppBar(
         elevation: 0,
         backgroundColor: Colors.transparent,
-        leading: const Padding(
-          padding: EdgeInsets.all(8.0),
-          child: CircleAvatar(
-            backgroundImage: AssetImage('assets/images/avatar.png'),
+        leading: Builder(
+          builder: (context) => GestureDetector(
+            onTap: () {
+              Scaffold.of(context).openDrawer();
+            },
+            child: const Padding(
+              padding: EdgeInsets.all(8.0),
+              child: CircleAvatar(
+                backgroundImage: AssetImage('assets/images/avatar.png'),
+              ),
+            ),
           ),
         ),
         title: PreferredSize(
@@ -69,6 +77,7 @@ class _RestaurantsOverviewState extends State<RestaurantsOverview> {
           ),
         ),
       ),
+      drawer: const CustomDrawer(),
       body: _pages[_currentIndex],
       bottomNavigationBar: CustomBottomNavigationBar(
         currentIndex: _currentIndex,
@@ -101,7 +110,7 @@ class RestaurantsOverviewContent extends StatelessWidget {
                       color: Colors.pink,
                       onTap: () {
                         Navigator.of(context).pushNamed(
-                          AppRoutes.RESTAURANTS_FAST_FOOD,
+                          AppRoutes.CATEGORIES_FAST_FOOD,
                         );
                       }),
                   const SizedBox(width: 16),
@@ -110,7 +119,7 @@ class RestaurantsOverviewContent extends StatelessWidget {
                     color: Colors.blue,
                     onTap: () {
                       Navigator.of(context)
-                          .pushNamed(AppRoutes.RESTAURANTS_MEXICAN);
+                          .pushNamed(AppRoutes.CATEGORIES_MEXICAN);
                     },
                   ),
                   const SizedBox(width: 16),
@@ -119,7 +128,7 @@ class RestaurantsOverviewContent extends StatelessWidget {
                     color: Colors.green,
                     onTap: () {
                       Navigator.of(context)
-                          .pushNamed(AppRoutes.RESTAURANTS_JAPANESE);
+                          .pushNamed(AppRoutes.CATEGORIES_JAPANESE);
                     },
                   ),
                 ],
