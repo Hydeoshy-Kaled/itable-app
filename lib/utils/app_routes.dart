@@ -11,4 +11,5 @@ class AppRoutes {
   static const CATEGORIES_FAST_FOOD = '/categories-fast-food';
   static const CATEGORIES_JAPANESE = '/categories-japanese';
   static const SUCESS_FORM = '/sucess-form';
+  static const RESERVATION_FORM = '/reservation-form';
 }

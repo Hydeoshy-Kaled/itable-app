@@ -13,6 +13,7 @@ import 'package:itable_app/pages/restaurants_mexican_page/restaurants_mexican_vi
 import 'package:itable_app/utils/app_routes.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:itable_app/auth/auth.dart';
+import 'package:itable_app/widgets/reservation_form.dart';
 import 'package:itable_app/widgets/sucessForm_page.dart';
 
 void main() {
@@ -72,6 +73,7 @@ class ItableApp extends ConsumerWidget {
         AppRoutes.CATEGORIES_FAST_FOOD: (ctx) => const CategoriesFastFood(),
         AppRoutes.CATEGORIES_JAPANESE: (ctx) => const CategoriesJapanese(),
         AppRoutes.SUCESS_FORM: (ctx) => const SuccessPage(),
+        AppRoutes.RESERVATION_FORM: (ctx) => const ReservationForm(),
         
       },
     );

@@ -20,7 +20,7 @@ class AuthPage extends ConsumerWidget {
             SizedBox(
               width: 400,
               height: 400,
-              child: Image.asset('assets/images/Icone Itable.png'),
+              child: Image.asset('assets/images/icone_itable.png'),
             ),
             SizedBox(
               //padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 20),

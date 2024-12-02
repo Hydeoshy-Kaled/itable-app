@@ -110,7 +110,7 @@ class RestaurantsOverviewContent extends StatelessWidget {
                       color: Colors.pink,
                       onTap: () {
                         Navigator.of(context).pushNamed(
-                          AppRoutes.CATEGORIES_FAST_FOOD,
+                          AppRoutes.RESERVATION_FORM,
                         );
                       }),
                   const SizedBox(width: 16),
