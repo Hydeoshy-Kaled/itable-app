@@ -13,7 +13,7 @@ import 'package:itable_app/pages/restaurants_mexican_page/restaurants_mexican_vi
 import 'package:itable_app/utils/app_routes.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:itable_app/auth/auth.dart';
-import 'package:itable_app/widgets/reservation_form.dart';
+import 'package:itable_app/pages/restaurants_page/reservation_form/reservation_form.dart';
 import 'package:itable_app/widgets/sucessForm_page.dart';
 
 void main() {
