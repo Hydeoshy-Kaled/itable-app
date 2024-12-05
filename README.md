@@ -22,7 +22,7 @@ Para executar este projeto, é necessário configurar o ambiente de desenvolvime
 
 3. **Instale o Android Studio e configure um emulador**  
    - Baixe e instale o [Android Studio](https://developer.android.com/studio).  
-   - No Android Studio, configure um emulador Android seguindo este [tutorial oficial](https://developer.android.com/studio/run/emulator).
+   - No Android Studio, configure um emulador Android seguindo este [tutorial oficial](https://www.youtube.com/watch?v=wcO-Et_jpeo).
 
 4. **Verifique as configurações do Flutter**  
    Após instalar o Flutter, abra o terminal e execute:  
