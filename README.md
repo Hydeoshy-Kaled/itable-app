@@ -36,21 +36,23 @@ Diferente de alguns projetos, este não exige a configuração de variáveis de 
    Certifique-se de instalar a **versão 3.24.4 do Flutter** para garantir compatibilidade com o projeto.  
    Siga as instruções no [Guia Oficial de Instalação do Flutter](https://docs.flutter.dev/get-started/install) para baixar e configurar a versão correta no seu sistema operacional.
 
-2. **Instale o Visual Studio Code (VS Code)**  
+   Se caso ainda permanecer dúvidas acessar este link do [tutorial oficial](https://www.youtube.com/watch?v=wcO-Et_jpeo). 
+
+3. **Instale o Visual Studio Code (VS Code)**  
    Baixe e instale o VS Code a partir do [site oficial](https://code.visualstudio.com/).  
    Após a instalação, adicione as extensões:  
    - **Flutter**  
    - **Dart**
 
-3. **Instale o Android Studio e configure um emulador**  
+4. **Instale o Android Studio e configure um emulador**  
    - Baixe e instale o [Android Studio](https://developer.android.com/studio).  
    - No Android Studio, configure um emulador Android seguindo este [tutorial oficial](https://www.youtube.com/watch?v=wcO-Et_jpeo).
 
-4. **Verifique as configurações do Flutter**  
+5. **Verifique as configurações do Flutter**  
    Após instalar o Flutter, abra o terminal e execute:  
    ```bash
    flutter doctor
-5. **Execute o projeto**  
+6. **Execute o projeto**  
    No terminal do projeto, execute o comando:  
    ```bash
    flutter run 
