@@ -3,7 +3,6 @@ import 'package:itable_app/pages/auth_page.dart';
 import 'package:itable_app/pages/categories_restaurants/fast_food.dart';
 import 'package:itable_app/pages/categories_restaurants/japanese.dart';
 import 'package:itable_app/pages/categories_restaurants/mexican.dart';
-import 'package:itable_app/pages/restaurants_page/form_table.dart';
 import 'package:itable_app/pages/restaurants_page/restaurants_overview.dart';
 import 'package:itable_app/pages/welcome_screen.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -68,7 +67,6 @@ class ItableApp extends ConsumerWidget {
             const RestaurantsFastFoodView(),
         AppRoutes.RESTAURANTS_JAPANESE: (ctx) =>
             const RestaurantsJapaneseView(),
-        AppRoutes.BOOKING_FORM: (ctx) => const ReserveTable(),
         AppRoutes.CATEGORIES_MEXICAN: (ctx) => const CategoriesMexican(),
         AppRoutes.CATEGORIES_FAST_FOOD: (ctx) => const CategoriesFastFood(),
         AppRoutes.CATEGORIES_JAPANESE: (ctx) => const CategoriesJapanese(),
