@@ -13,7 +13,7 @@ class BookingsScreenNavigationView extends ConsumerWidget {
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Bookings'),
+        title: const Text('Orders'),
       ),
       body: bookings.isEmpty
           ? const Center(

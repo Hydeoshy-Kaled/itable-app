@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:itable_app/auth/auth.dart';
 
-class CustomDrawer extends StatelessWidget {
+class CustomDrawer extends ConsumerWidget {
   const CustomDrawer({super.key});
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
     return Drawer(
       child: ListView(
         padding: EdgeInsets.zero,
@@ -44,7 +46,13 @@ class CustomDrawer extends StatelessWidget {
             title: const Text('Logout'),
             onTap: () {
               Navigator.of(context).pop();
-              // Adicione a funcionalidade de logout aqui
+
+              // Chama o método de logout
+              ref.read(authProvider.notifier).logout();
+
+              // Redireciona para a tela de login ou inicial
+              Navigator.of(context).pushReplacementNamed(
+                  '/login'); // Altere para o nome da sua rota de login
             },
           ),
         ],

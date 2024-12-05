@@ -76,19 +76,27 @@ class _ReservationFormState extends State<ReservationForm> {
 
   void _submitForm() async {
     if (_formKey.currentState!.validate()) {
+      // Verifique se os dropdowns foram preenchidos
+      if (_selectedRestaurant == null || _selectedTable == null) {
+        _showErrorDialog('Por favor, preencha todos os campos obrigatórios.');
+        return;
+      }
+
+      // Continue com a submissão
       final reservation = Reservation(
         fullName: _nameController.text,
-        nameRestaurant: _selectedRestaurant?.id ?? '',
+        nameRestaurant: _selectedRestaurant!.id,
         dateTime: _dateController.text,
-        table: _selectedTable?.id ?? '', // Usando o ID da mesa selecionada
+        table: _selectedTable!.id,
         status: 'Pending',
       );
 
-      final dio = Dio();
-      dio.options.baseUrl = Constants.URL_APPENGINE;
-      dio.options.headers = {'Content-Type': 'application/json'};
-
       try {
+        final dio = Dio();
+        dio.options.baseUrl = Constants.URL_APPENGINE;
+        dio.options.headers = {'Content-Type': 'application/json'};
+        print('Corpo da requisição: ${reservation.toJson()}');
+
         final response = await dio.post(
           '/reservations',
           data: reservation.toJson(),
@@ -96,25 +104,18 @@ class _ReservationFormState extends State<ReservationForm> {
 
         if (response.statusCode == 200 || response.statusCode == 201) {
           ScaffoldMessenger.of(context).showSnackBar(
-            const SnackBar(
-              content: Text('Reserva realizada com sucesso!'),
-            ),
+            const SnackBar(content: Text('Reserva realizada com sucesso!')),
           );
           _formKey.currentState!.reset();
           setState(() {
             _selectedTable = null;
+            _selectedRestaurant = null;
           });
         } else {
-          throw Exception('Erro ao enviar reserva: ${response.data}');
+          throw Exception('Erro ao enviar reserva: ${response.statusCode}');
         }
-      } on DioException catch (error) {
-        String errorMessage = 'Erro desconhecido';
-        if (error.response != null) {
-          errorMessage = 'Erro ao enviar reserva: ${error.response!.data}';
-        } else if (error.message != null) {
-          errorMessage = 'Erro ao conectar: ${error.message}';
-        }
-        _showErrorDialog(errorMessage);
+      } catch (e) {
+        _showErrorDialog('Erro ao enviar reserva: $e');
       }
     } else {
       _showErrorDialog('Por favor, preencha todos os campos obrigatórios.');
@@ -163,7 +164,7 @@ class _ReservationFormState extends State<ReservationForm> {
     );
 
     _dateController.text =
-        "${selectedDateTime.day}/${selectedDateTime.month}/${selectedDateTime.year} ${selectedTime.format(context)}";
+        "${selectedDateTime.year}-${selectedDateTime.month.toString().padLeft(2, '0')}-${selectedDateTime.day.toString().padLeft(2, '0')} ${selectedDateTime.hour.toString().padLeft(2, '0')}:${selectedDateTime.minute.toString().padLeft(2, '0')}";
   }
 
   @override
@@ -374,7 +375,8 @@ class _ReservationFormState extends State<ReservationForm> {
               value: restaurant,
               child: Text(
                 '${restaurant.name} - ${restaurant.cuisineType} - ${restaurant.location}',
-                overflow: TextOverflow.ellipsis, // Previne que o texto extrapole
+                overflow:
+                    TextOverflow.ellipsis, // Previne que o texto extrapole
                 maxLines: 1,
               ),
             ),
@@ -394,5 +396,3 @@ class _ReservationFormState extends State<ReservationForm> {
     );
   }
 }
-
-

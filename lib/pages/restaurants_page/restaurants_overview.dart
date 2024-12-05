@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:itable_app/pages/restaurants_page/profile_screen_navigation.dart';
+import 'package:itable_app/pages/restaurants_page/bookings/bookings_screen_navigation_view.dart';
+
 import 'package:itable_app/utils/app_routes.dart';
 import 'package:itable_app/widgets/CustomDrawer.dart';
 import 'package:itable_app/widgets/category_card.dart';
@@ -20,8 +21,7 @@ class _RestaurantsOverviewState extends State<RestaurantsOverview> {
 
   final List<Widget> _pages = [
     const RestaurantsOverviewContent(),
-    // const BookingsScreenNavigationView(),
-    const ProfileScreenNavigation(),
+    const BookingsScreenNavigationView(),
   ];
 
   void _onTabTapped(int index) {
@@ -70,12 +70,6 @@ class _RestaurantsOverviewState extends State<RestaurantsOverview> {
             ),
           ),
         ),
-        title: PreferredSize(
-          preferredSize: const Size.fromHeight(50), // Altura desejada
-          child: SearchBar(
-            onChanged: _onSearchChanged,
-          ),
-        ),
       ),
       drawer: const CustomDrawer(),
       body: _pages[_currentIndex],
@@ -110,7 +104,7 @@ class RestaurantsOverviewContent extends StatelessWidget {
                       color: Colors.pink,
                       onTap: () {
                         Navigator.of(context).pushNamed(
-                          AppRoutes.RESERVATION_FORM,
+                          AppRoutes.CATEGORIES_FAST_FOOD,
                         );
                       }),
                   const SizedBox(width: 16),

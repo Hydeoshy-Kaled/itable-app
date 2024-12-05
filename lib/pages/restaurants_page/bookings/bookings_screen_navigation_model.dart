@@ -22,13 +22,13 @@ class BookingsModel{
 
   factory BookingsModel.fromJson(Map<String, dynamic>json){
     return BookingsModel(
-      restaurantName: json['restaurantName'] as String,
       restaurantTable: json['table'] as String,
       client: json['customer'] as String,
-      dateTime: DateTime.parse(json['dateTime']),
       numberPeople: json['numberOfPeople'] as String,
+      dateTime: DateTime.parse(json['dateTime']),
+      status: json['status'] as String,
+      restaurantName: json['restaurantName'] as String,
       orderNumber: json['orderNumber'] as String,
-      status: json['status'] as String
     );
   }
 }

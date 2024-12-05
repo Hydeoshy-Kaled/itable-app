@@ -122,7 +122,7 @@ class RestaurantsFastFoodView extends StatelessWidget {
                   text: 'Reserve agora',
                   onPressed: () {
                     Navigator.of(context).pushNamed(
-                      AppRoutes.BOOKING_FORM,
+                      AppRoutes.RESERVATION_FORM,
                     );
                   },
                 ),

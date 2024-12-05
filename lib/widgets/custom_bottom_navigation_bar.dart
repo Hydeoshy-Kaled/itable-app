@@ -28,7 +28,7 @@ class _CustomBottomNavigationBarState extends State<CustomBottomNavigationBar> {
         ),
         BottomNavigationBarItem(
           icon: Icon(Icons.receipt),
-          label: 'Bookings',
+          label: 'Orders',
         ),
       ],
     );

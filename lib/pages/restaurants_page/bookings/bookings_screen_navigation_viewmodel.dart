@@ -18,7 +18,7 @@ class BookingsScreenNavigationViewModel
       final response = await _authAppEngine.fetchData('/reservations');
 
       if (response.statusCode == 200) {
-        final List<dynamic> data = response.data;
+        final List<dynamic> data = response.data['reservations'];
         state = data.map((item) => BookingsModel.fromJson(item)).toList();
       } else {
         throw Exception('Falha ao carregar as reservas');
